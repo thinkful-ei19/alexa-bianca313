@@ -10,7 +10,7 @@ process.stdout.write('\x1Bc');
 // knex
 //   .select()
 //   .from('restaurants')
-//   .limit(2)
+//   .limit(11)
 //   .debug(true)
 //   .then(results => console.log(results));
 
@@ -84,16 +84,71 @@ process.stdout.write('\x1Bc');
 //   .debug(true)
 //   .then(results => console.log(results));
 
-knex('restaurants')
-  .returning(['id', 'name'])
-  .insert({
-    name: 'Chipotle',
-    borough: 'Queens',
-    cuisine: 'Mexican',
-    address_building_number: '999',
-    address_street: 'Palmer St',
-    address_zipcode: '11357'
-  })
-  .debug(true)
-  .then(results => console.log(results));
-  
+// knex('restaurants')
+//   .returning(['id', 'name'])
+//   .insert({
+//     name: 'Chipotle',
+//     borough: 'Queens',
+//     cuisine: 'Mexican',
+//     address_building_number: '999',
+//     address_street: 'Palmer St',
+//     address_zipcode: '11357'
+//   })
+//   .debug(true)
+//   .then(results => console.log(results));
+
+// knex('restaurants')
+//   .returning(['id', 'name'])
+//   .insert([
+//     {
+//       name: 'Alexas',
+//       borough: 'Queens',
+//       cuisine: 'Chinese',
+//       address_building_number: '345',
+//       address_street: 'Sunny St',
+//       address_zipcode: '11357'
+//     }, {
+//       name: 'Bianca',
+//       borough: 'Manhattan',
+//       cuisine: 'Indian',
+//       address_building_number: '678',
+//       address_street: 'Palmer St',
+//       address_zipcode: '11357'
+
+//     }, {
+//       name: 'Alexa and Biancas',
+//       borough: 'Brooklyn',
+//       cuisine: 'Italian',
+//       address_building_number: '111',
+//       address_street: 'Hipster St',
+//       address_zipcode: '11357'
+//     }
+//     ])
+//     .debug(true)
+//     .then(results => console.log(results));
+// knex('restaurants')
+//   .where('nyc_restaurant_id', '30191841')
+//   .update({name: 'DJ Reynolds Pub and Restaurant'})
+//   .debug(true)
+//   .then(results => console.log(results));
+
+// knex('restaurants')
+// .select()
+// .where('name', 'DJ Reynolds Pub and Restaurant')
+// .debug(true)
+// .then(results => console.log(results));
+
+// knex
+//   .select()
+//   .from('grades')
+//   //.where('id', 9)
+//   //.del()
+//   .debug(true)
+//   .then(results => console.log(results));
+
+// knex('restaurants')
+//   .where('id', 22)
+//   .del()
+//   .debug(true)
+//   .then(results => console.log(results));
+
